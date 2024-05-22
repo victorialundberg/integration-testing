@@ -1,3 +1,6 @@
 import { init } from "./movieApp";
 
-init();
+window.onload = () => {
+    init();
+};
+

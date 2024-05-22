@@ -1,7 +1,6 @@
-import { IMovie } from "./models/Movie";
-import { getData } from "./services/movieService";
 
-let movies: IMovie[] = [];
+import { handleSubmit } from "./functions";
+import { IMovie } from "./models/Movie";
 
 export const init = () => {
   let form = document.getElementById("searchForm") as HTMLFormElement;
@@ -10,28 +9,6 @@ export const init = () => {
     handleSubmit();
   });
 };
-
-export async function handleSubmit() {
-  let searchText = (document.getElementById("searchText") as HTMLInputElement)
-    .value;
-
-  let container: HTMLDivElement = document.getElementById(
-    "movie-container"
-  ) as HTMLDivElement;
-  container.innerHTML = "";
-
-  try {
-    movies = await getData(searchText);
-
-    if (movies.length > 0) {
-      createHtml(movies, container);
-    } else {
-      displayNoResult(container);
-    }
-  } catch {
-    displayNoResult(container);
-  }
-}
 
 export const createHtml = (movies: IMovie[], container: HTMLDivElement) => {
   for (let i = 0; i < movies.length; i++) {
