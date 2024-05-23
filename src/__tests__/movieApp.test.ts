@@ -18,12 +18,11 @@ describe("main tests", () => {
   });
   it("should call handleSubmit", async () => {
     // Assign
-
+    const form = document.getElementById("searchForm") as HTMLFormElement;
     // Act
     init();
 
     // Assert
-    const form = document.getElementById("searchForm") as HTMLFormElement;
     form.dispatchEvent(new Event("submit"));
     expect(mockedHandleSubmit).toHaveBeenCalled();
   });
