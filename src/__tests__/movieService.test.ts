@@ -19,6 +19,7 @@ describe("Movie service", () => {
     // Assert
     expect(movieList).toHaveLength(6);
     expect(movieList[0].Title).toBe("B");
+    expect(movieList[5].Year).toBe("yearD");
     expect(mockedAxios).toHaveBeenCalled();
   });
 
