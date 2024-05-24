@@ -3,17 +3,45 @@ import { IMovie } from "../../models/Movie";
 export const movies: IMovie[] = [
   {
     Title: "B",
-    imdbID: "",
-    Type: "",
-    Poster: "",
-    Year: "",
+    imdbID: "idB",
+    Type: "typeB",
+    Poster: "posterB",
+    Year: "yearB",
   },
   {
     Title: "A",
-    imdbID: "",
-    Type: "",
-    Poster: "",
-    Year: "",
+    imdbID: "idA",
+    Type: "typeA",
+    Poster: "posterA",
+    Year: "yearA",
+  },
+  {
+    Title: "F",
+    imdbID: "idF",
+    Type: "typeF",
+    Poster: "posterF",
+    Year: "yearF",
+  },
+  {
+    Title: "C",
+    imdbID: "idC",
+    Type: "typeC",
+    Poster: "posterC",
+    Year: "yearC",
+  },
+  {
+    Title: "E",
+    imdbID: "idE",
+    Type: "typE",
+    Poster: "posterE",
+    Year: "yearE",
+  },
+  {
+    Title: "F",
+    imdbID: "idD",
+    Type: "typeD",
+    Poster: "posterD",
+    Year: "yearD",
   },
 ];
 

@@ -17,8 +17,9 @@ describe("Movie service", () => {
     // Act
     const movieList = await getData(searchText);
     // Assert
-    expect(movieList).toHaveLength(2);
+    expect(movieList).toHaveLength(6);
     expect(movieList[0].Title).toBe("B");
+    expect(mockedAxios).toHaveBeenCalled();
   });
 
   it("should handle error", async () => {
@@ -34,5 +35,6 @@ describe("Movie service", () => {
 
     // Assert
     expect(movieList).toHaveLength(0);
+    expect(mockedAxios).toHaveBeenCalled();
   });
 });
